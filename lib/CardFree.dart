@@ -65,6 +65,7 @@ class _CardFreeState extends BaseCardState {
   }
 
   _bookListButton() {
+    ///设置宽高比重
     return FractionallySizedBox(
       widthFactor: 1,
       child: Padding(
