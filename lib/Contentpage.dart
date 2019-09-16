@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_wechat_book/CardRecommed.dart';
 import 'package:flutter_wechat_book/CustomAppBar.dart';
+
+import 'CardFree.dart';
+import 'CardShare.dart';
+import 'CardSpecial.dart';
 
 class ContentPage extends StatefulWidget {
   final ValueChanged<int> onPageChanged;
@@ -40,10 +45,11 @@ class _ContentPageState extends State<ContentPage> {
         Expanded(
           child: PageView(
             children: <Widget>[
-              _getPageViewItem(0),
-              _getPageViewItem(1),
-              _getPageViewItem(2),
-              _getPageViewItem(3),
+              _getPageViewItem(CardRecommed()),
+              _getPageViewItem(CardShare()),
+              _getPageViewItem(CardFree()),
+              _getPageViewItem(CardSpecial()),
+
             ],
             controller: _pageController,
             onPageChanged: widget.onPageChanged,
@@ -53,12 +59,10 @@ class _ContentPageState extends State<ContentPage> {
     );
   }
 
-  Widget _getPageViewItem(int index) {
+  Widget _getPageViewItem(Widget child) {
     return Padding(
       padding: EdgeInsets.all(10),
-      child: Container(
-        decoration: BoxDecoration(color: _colors[index]),
-      ),
+      child:child
     );
   }
   _statusBar(){
@@ -70,6 +74,7 @@ class _ContentPageState extends State<ContentPage> {
       statusBarIconBrightness: Brightness.dark,
       statusBarBrightness: Brightness.light,
     );
+    ///沉浸式状态栏dark模式
     SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
   }
 }

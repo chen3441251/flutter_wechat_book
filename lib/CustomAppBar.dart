@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    //计算页面距离刘海安全区域的距离
     var paddingTop = MediaQuery.of(context).padding.top;
     return Container(
       margin: EdgeInsets.fromLTRB(20, paddingTop + 10, 20, 5),
