@@ -10,17 +10,31 @@ class CustomAppBar extends StatelessWidget {
       padding: EdgeInsets.fromLTRB(20, 7, 20, 5),
       decoration: BoxDecoration(
           color: Colors.white60, borderRadius: BorderRadius.circular(19.0)),
-      child: Row(children: <Widget>[
-        Icon(Icons.search,color: Colors.grey,),
-        Expanded(child: Text("长安十二时辰",style: TextStyle(color: Colors.grey,fontSize: 15),)),
-        Container(
-          width: 1,
-          height: 20,
-          decoration: BoxDecoration(color: Colors.grey,),
-          margin: EdgeInsets.only(right: 13),
-        ),
-        Text("书城",style: TextStyle(fontSize: 13),)
-      ],),
+      child: Row(
+        children: <Widget>[
+          Icon(
+            Icons.search,
+            color: Colors.grey,
+          ),
+          Expanded(
+              child: Text(
+            "长安十二时辰",
+            style: TextStyle(color: Colors.grey, fontSize: 15),
+          )),
+          Container(
+            width: 1,
+            height: 20,
+            decoration: BoxDecoration(
+              color: Colors.grey,
+            ),
+            margin: EdgeInsets.only(right: 13),
+          ),
+          Text(
+            "书城",
+            style: TextStyle(fontSize: 13),
+          )
+        ],
+      ),
     );
   }
 }

@@ -34,13 +34,13 @@ class CardRecommedState extends BaseCardState {
     // TODO: implement bottomContent
     return Expanded(
         child: Container(
-          //充满容器
-          constraints: BoxConstraints.expand(),
+      //充满容器
+      constraints: BoxConstraints.expand(),
       child: Image.network(
         'http://www.devio.org/io/flutter_beauty/card_1.jpg',
         fit: BoxFit.cover,
       ),
-          margin: EdgeInsets.only(top: 20),
+      margin: EdgeInsets.only(top: 20),
     ));
   }
 }
